@@ -3,6 +3,8 @@
   <head>
     <title>FutureJS - Web components</title>
 
+    <script src="webcomponents.min.js"></script>
+
     <link rel="import" href="x-demo.html">
     <link rel="import" href="x-slide.html">
     <link rel="import" href="x-slidedeck.html">
@@ -23,9 +25,15 @@
         color: firebrick;
         font-size: 3em;
       }
+
       h2 {
         font-size: 2.5em;
         color: cadetblue;
+      }
+
+      x-slide {
+        width: 100%;
+        height: 100vh;
       }
 
       .center {
@@ -185,7 +193,7 @@
       <x-slide>
         <h1>Shadow DOM</h1>
         <h2>What problem does it solve?</h2>
-        <div class="center"><img width="80%" src="coupling.gif"></div>
+        <div class="center"><img height="500" src="coupling.gif"></div>
       </x-slide>
 
       <x-slide>
@@ -212,7 +220,7 @@
       <x-slide>
         <h1>HTML imports</h1>
         <h2>What problem do they solve?</h2>
-        <div class="center"><img width="80%" src="linking.gif"></div>
+        <div class="center"><img height="500" src="linking.gif"></div>
       </x-slide>
 
       <x-slide>
@@ -251,7 +259,7 @@
         <h2>Sorta.</h2>
         <div class="center">
           <img src="xray.png" width="60%">
-          <img src="patrick.jpg" width="25%" style="position: absolute; left: 0; top: 50%;">
+          <img src="patrick.jpg" width="25%" style="position: relative; left: 0; top: 50%;">
         </div>
       </x-slide>
 
@@ -267,6 +275,7 @@
         <h1>Useful stuff</h1>
         <h2>Polyfill &amp; frameworks</h2>
         <ul>
+          <li><a href="https://github.com/WebComponents/webcomponentsjs">Webcomponents.js</a></li>
           <li><a href="http://www.polymer-project.org">Polymer</a></li>
           <li><a href="http://www.x-tags.org">X-Tags</a></li>
         </ul>
@@ -275,7 +284,6 @@
         <ul>
           <li><a href="http://mozilla.github.io/brick/">Brick</a></li>
           <li><a href="http://customelements.io/">CustomElements.io</a></li>
-          <li><a href="https://apps.webmaker.org/">Mozilla AppMaker</a></li>
         </ul>
 
       </x-slide>

@@ -36,7 +36,7 @@
       preview.document.close();
     };
 
-    var localDoc = document.currentScript.ownerDocument;
+    var localDoc = (document._currentScript || document.currentScript).ownerDocument;
     var proto = Object.create(HTMLElement.prototype);
 
     Object.defineProperty(proto, "src", { get: function() { return src; }, set: function(newSrc) { src = newSrc; this.load(); } });
@@ -50,6 +50,7 @@
       previewElem = self._root.getElementById("preview");
 
       self.source = self._root.getElementById("source");
+      console.log('preview', previewElem)
       self.preview = (previewElem.contentWindow) ? previewElem.contentWindow :
                        (previewElem.contentDocument.document) ? previewElem.contentDocument.document : previewElem.contentDocument;
 

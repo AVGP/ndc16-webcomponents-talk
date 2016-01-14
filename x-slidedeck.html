@@ -38,13 +38,13 @@
   var XSlideDeck = undefined;
 
   (function() {
-    var localDoc = document.currentScript.ownerDocument;
+    var localDoc = (document._currentScript || document.currentScript).ownerDocument;
     var proto = Object.create(HTMLElement.prototype);
 
     proto.createdCallback = function() {
       this._root = this.createShadowRoot();
 
-      var tplContent = localDoc.querySelector("template#deck").content;
+      var tplContent = localDoc.querySelector("template").content;
       this._root.appendChild(tplContent.cloneNode(true));
     };
 

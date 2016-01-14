@@ -17,8 +17,7 @@
 <script>
   var XSlide = undefined;
   (function() {
-    var localDoc = document.currentScript.ownerDocument;
-    console.log(localDoc);
+    var localDoc = (document._currentScript || document.currentScript).ownerDocument;
     var proto = Object.create(HTMLElement.prototype);
 
     proto.createdCallback = function() {
