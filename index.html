@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FutureJS - Web components</title>
+
+    <link rel="import" href="x-demo.html">
+    <link rel="import" href="x-slide.html">
+    <link rel="import" href="x-slidedeck.html">
+    <style>
+      body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a, a:visited {
+        color: steelblue;
+      }
+
+      h1 {
+        color: firebrick;
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 2.5em;
+        color: cadetblue;
+      }
+
+      .center {
+        text-align: center;
+        display: block;
+      }
+
+      .reallycentered {
+        position: relative;
+        top: 50%;
+        margin-top: -1.5em;
+        text-align: center;
+      }
+
+      .fineprint {
+        font-size: 0.75em;
+        font-weight: light;
+        color: gray;
+        padding: 0;
+        margin: 0;
+      }
+
+      ol, ul {
+        margin-left: 3em;
+        font-size: 2em;
+      }
+
+      x-demo::shadow {
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <x-slidedeck>
+      <x-slide class="center">
+        <h1>
+          <img src="webcomponents.png"><br>
+          Web components
+        </h1>
+        <h2>A whirlwind tour</h2>
+      </x-slide>
+
+      <x-slide>
+        <h1>Good afternoon, London</h1>
+        <h2 class="center"><img src="hi.jpg" width="50%"></h2>
+      </x-slide>
+
+      <x-slide>
+        <h1>What I do</h1>
+        <h2 class="reallycentered" style="margin-top: -250px">
+          <a href="http://about.archilogic.com"><img src="archilogic-furniture-drop.gif"></a><div style="color: black;">Archilogic</div>
+          <p><a href="https://twitter.com/g33konaut">@g33konaut</a></p>
+
+        </h2>
+      </x-slide>
+
+      <x-slide>
+        <h1>I am from Zurich</h1>
+        <div class="center"><img src="zurich.jpg" width="50%"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Let's talk about <span style="color:lightslategray">Web components</span></h1>
+        <div class="center"><img src="lego.jpg" width="70%" class="reallycentered"></div>
+        <p class="center fineprint">Image CC-BY-SA 2.0 by Alan Chia, <a href="http://www.flickr.com/photos/13403905@N03/2080281038/">Source</a></p>
+      </x-slide>
+
+      <x-slide>
+        <h1>First, let's talk about <span style="color:lightslategray">HTML</span></h1>
+        <div class="center"><img src="lego2.jpg" width="500" class="reallycentered"></div>
+        <p class="center fineprint">Lego ad from 1978</p>
+      </x-slide>
+
+      <x-slide>
+        <h1>We need to move forward <em>quickly</em></h1>
+        <div class="center"><img src="ui_then.gif"></div>
+        <h2 class="center">vs</h2>
+        <div class="center"><img src="ui_now.png" height="201"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>A sample: Filterable list</h1>
+        <x-demo style="display: block; height: 75%; width: 90%; position: relative; left: 5%" src="demo1.html"></x-demo>
+      </x-slide>
+
+      <x-slide>
+        <h1>How to go on from here?</h1>
+        <ol>
+          <li>Keep it a Javascript hack</li>
+          <li>Try to implement it directly in the browser's codebases</li>
+          <li>Try to get it standardized</li>
+        </ol>
+      </x-slide>
+
+      <x-slide>
+        <h1>How to go on from here?</h1>
+        <ol>
+          <li>Keep it a Javascript hack</li>
+          <li>Try to implement it directly in the browser's codebases</li>
+          <li style="font-weight: bold;">Try to get it standardized</li>
+        </ol>
+      </x-slide>
+
+      <x-slide>
+        <h1>But then again...</h1>
+        <div class="center">
+          <img src="wcag_irc.png" width="60%">
+          <p class="fineprint"><a href="https://twitter.com/stevefaulkner/status/458643254024888320">Source: @stevefaulkner</a></p>
+        </div>
+      </x-slide>
+
+      <x-slide style="background:url('buildingblockception.gif'); background-size: cover;">
+        <div class="reallycentered" style="background: rgba(255,255,255, 0.8);">
+          <h1>Build <span style="color: teal">new HTML elements</span></h1>
+          <h2 style="color:firebrick">using <span style="color: teal">HTML, CSS &amp; Javascript</span></h2>
+        </div>
+      </x-slide>
+
+      <x-slide>
+        <h1>I know what you think</h1>
+        <div class="center"><img src="this-is-nuts.jpg" height="500px"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Web components Standards:</h1>
+        <ul>
+          <li>Template element</li>
+          <li>Shadow DOM</li>
+          <li>Custom elements</li>
+          <li>HTML imports</li>
+        </ul>
+        <p><a href="http://w3c.github.io/webcomponents/explainer/">Go read the intro here</a></p>
+      </x-slide>
+
+      <x-slide>
+        <h1>Web components Standards:</h1>
+        <ul>
+          <li>Template element [<em style="color: teal">W3C Recommendation</em>]</li>
+          <li>Shadow DOM [<em style="color: lightslategray">W3C Working Draft</em>]</li>
+          <li>Custom elements [<em style="color: lightslategray">W3C Working Draft</em>]</li>
+          <li>HTML imports [<em style="color: lightslategray">W3C Working Draft</em>]</li>
+        </ul>
+        <p><a href="http://w3c.github.io/webcomponents/explainer/">Go read the intro here</a></p>
+      </x-slide>
+
+      <x-slide>
+        <h1>Template element</h1>
+        <h2>What problem does it solve?</h2>
+        <div class="center"><img src="placeholder.jpg"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Template element</h1>
+        <x-demo style="display: block; height: 75%; width: 90%; position: relative; left: 5%" src="demo2.html"></x-demo>
+      </x-slide>
+
+      <x-slide>
+        <h1>Shadow DOM</h1>
+        <h2>What problem does it solve?</h2>
+        <div class="center"><img width="80%" src="coupling.gif"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Careful: Draft in flux</h1>
+        <div class="center"><img src="danger.jpg" height="500px"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Shadow DOM</h1>
+        <x-demo style="display: block; height: 75%; width: 90%; position: relative; left: 5%" src="demo3.html"></x-demo>
+      </x-slide>
+
+      <x-slide>
+        <h1>Custom elements</h1>
+        <h2>What problem do they solve?</h2>
+        <div class="center"><img src="blocks.gif"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Custom elements</h1>
+        <x-demo style="display: block; height: 75%; width: 90%; position: relative; left: 5%" src="demo4.html"></x-demo>
+      </x-slide>
+
+      <x-slide>
+        <h1>HTML imports</h1>
+        <h2>What problem do they solve?</h2>
+        <div class="center"><img width="80%" src="linking.gif"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Careful: Future uncertain</h1>
+        <div class="center"><img src="danger.jpg" height="500px"></div>
+      </x-slide>
+
+      <x-slide>
+        <h1>HTML imports</h1>
+        <x-demo style="display: block; height: 75%; width: 90%; position: relative; left: 5%" src="demo5.html"></x-demo>
+      </x-slide>
+
+      <x-slide>
+        <div class="reallycentered" style="margin-top: -275px;">
+          <img src="yeah.jpg" width="50%">
+        </div>
+      </x-slide>
+
+      <x-slide>
+        <div class="reallycentered" style="margin-top: -275px;">
+          <img src="updated.png" width="80%">
+        </div>
+      </x-slide>
+
+
+      <x-slide>
+        <h1>It's already in your browser.</h1>
+        <h2>Sorta.</h2>
+        <div class="center">
+          <img src="xray.png" width="60%">
+        </div>
+      </x-slide>
+
+      <x-slide>
+        <h1>It's already in your browser.</h1>
+        <h2>Sorta.</h2>
+        <div class="center">
+          <img src="xray.png" width="60%">
+          <img src="patrick.jpg" width="25%" style="position: absolute; left: 0; top: 50%;">
+        </div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Browser support</h1>
+        <div class="center">
+          <img src="support.png" width="60%">
+          <p class="fineprint"><a href="http://jonrimmer.github.io/are-we-componentized-yet/">Source: are-we-componentized-yet</a>, captured 03.05.14</p>
+        </div>
+      </x-slide>
+
+      <x-slide>
+        <h1>Useful stuff</h1>
+        <h2>Polyfill &amp; frameworks</h2>
+        <ul>
+          <li><a href="http://www.polymer-project.org">Polymer</a></li>
+          <li><a href="http://www.x-tags.org">X-Tags</a></li>
+        </ul>
+
+        <h2>Try it</h2>
+        <ul>
+          <li><a href="http://mozilla.github.io/brick/">Brick</a></li>
+          <li><a href="http://customelements.io/">CustomElements.io</a></li>
+          <li><a href="https://apps.webmaker.org/">Mozilla AppMaker</a></li>
+        </ul>
+
+      </x-slide>
+
+      <x-slide>
+        <h1 class="centered">Thank you!</h1>
+        <h2 class="centered">Feedback welcome!</h2>
+        <ul>
+          <li><a href="http://bit.ly/ndc16-webcomponents">Slides: bit.ly/ndc16-webcomponents</a></li>
+          <li><a href="https://twitter.com/g33konaut">Twitter: @g33konaut</a></li>
+          <li><a href="https://ox86.tumblr.com">Blog: ox86.tumblr.com</a></li>
+          <li>Email: martin@geekonaut.de</li>
+        </ul>
+      </x-slide>
+
+    </x-slidedeck>
+  </body>
+</html>
